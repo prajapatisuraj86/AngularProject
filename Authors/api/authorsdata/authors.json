@@ -1,0 +1,32 @@
+[
+    {
+        "authorId": 1,
+        "authorName": "Maruti",
+        "authorTechnology": "Angular 2",
+        "authorLocation": "India" 
+    },
+    {
+        "authorId": 2,
+        "authorName": "Shiv",
+        "authorTechnology": "Asp.Net",
+        "authorLocation": "India" 
+    },
+    {
+       "authorId": 3,
+        "authorName": "Krunal",
+        "authorTechnology": "HTML 5",
+        "authorLocation": "India" 
+    },
+    {
+        "authorId": 4,
+        "authorName": "Stevan",
+        "authorTechnology": "AngularJS 1",
+        "authorLocation": "USA" 
+    },
+    {
+         "authorId": 5,
+        "authorName": "Scott",
+        "authorTechnology": "MVC",
+        "authorLocation": "USA" 
+    }
+]

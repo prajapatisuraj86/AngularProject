@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <h1>Demo of property of one way binding</h1>
+        <input type="text" [(ngModel)]='x'>
+        <p>value of variable x is {{x}}</p>
+
+        <h1>Demo of property of two way binding</h1>
+        <input type="text" [(ngModel)]='bookTitle'>
+        <p>value of variable x is {{x}}</p>
+        <input type="text" [(ngModel)]='bookTitle'>
+
+        <h1>Demo of Event Binding</h1>
+        <input type="button" value="Increment" (click)="incr()">
+
+        <div>
+            <ul>
+                <li *ngFor='#x of authorsList'>
+                    {{x.authorName}} is master in {{x.authorTechnology}}
+                </li>
+            </ul>
+            <div *ngIf="authorsList.length == 3">
+                <h3>Total available cources are {{authorsList.length}}</h3>
+            </div>
+        </div>
+    </div>
+</div>

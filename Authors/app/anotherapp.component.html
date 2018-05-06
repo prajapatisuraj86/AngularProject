@@ -1,0 +1,21 @@
+<div>Test Flag</div>
+
+
+<input type="text" (blur)='incr()'>
+<br>
+Are u Sure?
+<input type="checkbox" (change)='incr()'>
+<h3>Value of X is {{x}}</h3>
+
+<br>
+
+Java : <input #javaid type="checkbox" (change)="java = javaid.checked"> <br>
+Angular : <input #angularid type="checkbox" (change)="angular = angularid.checked">
+
+<li>
+    <ul>
+        <div *ngIf="java">JAVA</div>
+        <div *ngIf="angular">ANGULAR</div>
+    </ul>
+</li>
+
