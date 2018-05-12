@@ -1,7 +1,7 @@
 {
     "name": "authors-demo",
     "version": "1.0.0",
-    "author": "Maruti Makwana",
+    "author": "Suraj Prajapati",
     "description": "Package for the Authors Demo sample application",
     "scripts": {
         "start": "concurrent \"npm run tsc:w\" \"npm run lite\" ",
