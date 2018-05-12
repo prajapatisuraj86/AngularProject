@@ -1,22 +1,92 @@
-<div>Test Flag</div>
-
-
-<input type="text" (blur)='incr()'>
+<div [ngStyle]="{'font-weight':'bold'}">
+    ================================================================================== 
+    <div [ngStyle]="{'color':'red'}">
+    --Demo of Event Binding, Property Binding and Two way Binding 
+    </div>                  
+    ================================================================================== 
+</div>
 <br>
-Are u Sure?
-<input type="checkbox" (change)='incr()'>
+<div [ngStyle]="{'font-size':'20px'}">Below is the Checkbox and Input Box for Binding</div>
+
+<div>
+    Blurrrr Event Input Box :  <input type="text" (blur)='incr()'>
+</div>
+<div>
+    Mark Event Check Box : <input type="checkbox" (change)='incr()'>
+</div>
+
 <h3>Value of X is {{x}}</h3>
 
+<div [ngStyle]="{'font-weight':'bold'}">
+        ================================================================================== 
+        <div [ngStyle]="{'color':'red'}">
+        --Select Your Programming Skills
+        </div>                  
+        ================================================================================== 
+    </div>
 <br>
-<div>Demo of Event binding</div>
-<br>
-Java : <input #javaid type="checkbox" (change)="java = javaid.checked"> <br>
-Angular : <input #angularid type="checkbox" (change)="angular = angularid.checked">
+Java Ln : <input #javaid type="checkbox" (change)="java = javaid.checked"> <br>
+Angular : <input #angularid type="checkbox" (change)="angular = angularid.checked"> <br>
+CSharp : <input #csharpid type="checkbox" (change)="csharp = csharpid.checked">
 
 <li>
     <ul>
         <div *ngIf="java">JAVA</div>
         <div *ngIf="angular">ANGULAR</div>
+        <div *ngIf="csharp"> C SHARP</div>
     </ul>
 </li>
 
+<div [ngStyle]="{'font-weight':'bold'}">
+        ================================================================================== 
+        <div [ngStyle]="{'color':'red'}">
+        --Below is CSS used Simple Template
+        </div>                  
+        ================================================================================== 
+    </div>
+<br>
+
+<div>
+    <style>
+        .changeColor{
+            color: blue;
+        }
+        .changeSize{
+            font-size: 20px;
+        }
+        .italic{
+            font-style: italic;
+        }
+    </style>
+
+    <div>
+        <p [className]="'changeColor changeSize'">Hello This is Suraj Prajapati using Class Name</p>
+    </div>
+
+    <div [ngStyle]="{'color':'green','font-size':'20px', 'font-weight':'bold'}">
+            Hello This is Suraj Prajapati using  NG Style
+    </div>
+
+    <div [ngStyle]="{'color':color,'font-size':size + 'px', 'font-weight':fw}">
+        Style is getting changed using ngModel
+    </div>
+
+    <input type="text" placeholder="Give Color Name" [(ngModel)]="color"/>
+    <button (click)="size = size + 1">+</button>
+    <button (click)="size = size - 1">-</button>
+    <input type="text" placeholder="Give Font weight" [(ngModel)]="fw"/>
+    
+    <div>
+        <div [ngClass]="['changeColor','italic','changeSize']">
+            Array of Classes
+        </div>
+
+        <div [ngClass]="'changeColor italic'">
+                String of Classes
+        </div>
+
+        <div [ngClass]="{'changeColor':false,'italic':true, 'changeSize':true}">
+                Object of Classes
+        </div>
+    </div>
+</div>
