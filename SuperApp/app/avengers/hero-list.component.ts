@@ -1,10 +1,12 @@
 import { Component, OnInit } from "angular2/core";
 import { IHero } from './hero';
+import { HeroFilterPipe } from './hero-pipe.component';
 
 @Component({
     selector:'super-heros',
     templateUrl:'app/avengers/hero-list.component.html',
-    styleUrls:['app/avengers/hero-list.component.css']
+    styleUrls:['app/avengers/hero-list.component.css'],
+    pipes:[HeroFilterPipe]
 })
 
 export class HeroListComponent implements OnInit {
