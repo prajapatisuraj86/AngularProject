@@ -34,7 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='#hero of heros'>
+                    <tr *ngFor='#hero of heros | heroFilter:listFilter'>
                         <td>
                             <img *ngIf='showImage'
                                 [src]='hero.imageUrl'

@@ -7,8 +7,8 @@ import { IHero } from './hero';
 
 export class HeroFilterPipe implements PipeTransform {
     transform(value : IHero[], args :string[]) : IHero [] {
-        let filter:string = args[0] ? args[0].toLocaleLowerCase():null;
-        return filter ? value.filter((hero:IHero) => 
-        hero.heroName.toLocaleLowerCase.indexOf(filter) != -1) : value;
+        let filteredValue:string = args[0] ? args[0].toLocaleLowerCase():null;
+        return filteredValue ? value.filter((hero:IHero) => 
+        hero.heroName.toLocaleLowerCase().indexOf(filteredValue.toLocaleLowerCase()) != -1) : value;
     }
 }

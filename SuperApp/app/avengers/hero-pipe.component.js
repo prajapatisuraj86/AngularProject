@@ -22,9 +22,9 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 function HeroFilterPipe() {
                 }
                 HeroFilterPipe.prototype.transform = function (value, args) {
-                    var filter = args[0] ? args[0].toLocaleLowerCase() : null;
-                    return filter ? value.filter(function (hero) {
-                        return hero.heroName.toLocaleLowerCase.indexOf(filter) != -1;
+                    var filteredValue = args[0] ? args[0].toLocaleLowerCase() : null;
+                    return filteredValue ? value.filter(function (hero) {
+                        return hero.heroName.toLocaleLowerCase().indexOf(filteredValue.toLocaleLowerCase()) != -1;
                     }) : value;
                 };
                 HeroFilterPipe = __decorate([
