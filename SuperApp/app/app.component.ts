@@ -1,5 +1,6 @@
 import { Component } from "angular2/core";
 import { HeroListComponent } from "./avengers/hero-list.component";
+import { HeroService } from "./avengers/hero.service";
 
 @Component({
     selector:'super-app',
@@ -7,7 +8,8 @@ import { HeroListComponent } from "./avengers/hero-list.component";
         <h1>{{pageTitle}}</h1>
         <super-heros></super-heros>
                 </div>`,
-    directives:[HeroListComponent]
+    directives:[HeroListComponent],
+    providers:[HeroService]
 })
 
 export class AppComponent {
